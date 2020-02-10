@@ -26,6 +26,8 @@
     --rc-grey-lt: #fbfbfb;
     --rc-grey-mid:  #ececec;
     --rc-grey-dr: #ababab;
+
+    --rc-black-lt: #333333;
     --rc-black: #000000;
 
     --rc-font-sanserif: Helvetica, Arial, sans-serif;
@@ -298,6 +300,35 @@ Common Utilities
     color: var(--rc-white);
 }
 
+.rc-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--rc-black-lt);
+}
+
+.rc-table td, .rc-table th {
+    padding: 0.4rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rc-grey-mid);
+}
+
+.rc-table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--rc-grey-mid);
+}
+
+.rc-table-striped td, .rc-table-striped th {
+    border-bottom: 1px solid var(--rc-grey-mid);
+}
+
+.rc-thead-gr th {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-gr);
+}
+
+.rc-thead-or th {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-or);
+}
 
 /* ---------------------------------------------------
 Custom Styles
