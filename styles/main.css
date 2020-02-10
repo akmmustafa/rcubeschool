@@ -311,7 +311,9 @@ Common Utilities
     vertical-align: top;
     border-bottom: 1px solid var(--rc-grey-mid);
 }
-
+.rc-table-hover tbody tr:hover {
+    background-color: var(--rc-grey-mid);
+}
 .rc-table-striped tbody tr:nth-of-type(odd) {
     background-color: var(--rc-grey-mid);
 }
@@ -319,6 +321,8 @@ Common Utilities
 .rc-table-striped td, .rc-table-striped th {
     border-bottom: 1px solid var(--rc-grey-mid);
 }
+
+.rc-table-hover tbody tr:hover {}
 
 .rc-thead-gr th {
     color: var(--rc-white);
