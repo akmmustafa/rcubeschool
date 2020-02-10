@@ -344,9 +344,6 @@ Custom Styles
     justify-content: flex-end;
     color: var(--rc-grey-dr);
 }
-.settings-label {
-    display: none;
-}
 .settings-icon {
     cursor: pointer;
 }
@@ -368,11 +365,7 @@ Custom Styles
         margin-right: 5px;
     }
     .search-wrapper input {
-        border-radius: 15px;
         padding-right: 30px;
-    }
-    .settings-label {
-        display: block;
     }
 }
 
