@@ -33,6 +33,8 @@
     --rc-font-sanserif: Helvetica, Arial, sans-serif;
     --rc-font-serif: "Times New Roman", Times, serif;
     --rc-font-monospace: "Lucida Console","Courier New"; 
+
+    --rc-para-grey: #777777;
 }
 
 html {
@@ -300,6 +302,7 @@ Common Utilities
     color: var(--rc-white);
 }
 
+/* --Table */
 .rc-table {
     width: 100%;
     margin-bottom: 1rem;
@@ -322,8 +325,6 @@ Common Utilities
     border-bottom: 1px solid var(--rc-grey-mid);
 }
 
-.rc-table-hover tbody tr:hover {}
-
 .rc-thead-gr th {
     color: var(--rc-white);
     background-color: var(--rc-swatch-gr);
@@ -332,6 +333,100 @@ Common Utilities
 .rc-thead-or th {
     color: var(--rc-white);
     background-color: var(--rc-swatch-or);
+}
+/* --MessageBox */
+.rc-messagebox {
+    margin-bottom: 1rem;
+    background-color: var(--rc-grey-mid);
+    color: var(--rc-black-lt);
+    border-radius: 0 0 3px 3px;
+}
+
+.mbox-head {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-gr);
+    padding: 3px 15px;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.mbox-head-or {
+    background-color: var(--rc-swatch-or);
+}
+
+.mbox-body {
+    padding: 15px; 
+    border-radius: 0 0 3px 3px;
+}
+
+/* --Paragraph */
+.rc-para p {
+    color: var(--rc-para-grey);
+}
+
+.rc-para p b {
+    color: var(--rc-black-lt);
+}
+
+.rc-para p i {
+    color: var(--rc-swatch-pk);
+    font-family: var(--rc-font-serif);
+}
+
+/* --Form Controls */
+.rc-form-container {
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border: 1px solid var(--rc-grey-mid);
+}
+
+.rc-form-head {
+    background-color: var(--rc-grey-mid);
+    padding: 3px 15px;
+    font-weight: bold;
+    border-radius: 3px 3px 0 0;
+}
+
+.rc-form-head-bl {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-bl);
+}
+
+.rc-form-head-pk {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-pk);
+}
+
+.rc-form {    
+    padding: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background-color: var(--rc-grey-lt);
+    padding: 3px 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0;
+    color: var(--rc-para-grey);
+}
+
+input,
+textarea {
+    border: 1px solid var(--rc-grey-mid);
+    border-radius: 3px;
+}
+
+.mandatory {
+    font-weight: bold;
+    margin-left: 5px;
+    color: var(--rc-swatch-or-dr2);
 }
 
 /* ---------------------------------------------------
