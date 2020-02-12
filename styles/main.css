@@ -232,6 +232,20 @@ Common Utilities
     padding: 0 !important;
 }
 
+.mx-auto {
+    margin: 0 auto;    
+}
+
+@media (min-width: 768px) {
+    .mx-auto {
+        width: 30%;
+    }
+}
+
+.mt-10p {
+    margin-top: 10%;
+}
+
 .clearfix::after {
     display: block;
     clear: both;
@@ -601,6 +615,98 @@ Custom Styles
     }
 }
 /* header-container starts */
+
+/* =============================== */
+
+/* login-container starts */
+.login-container {
+    width: 90%;
+    margin: 10% auto 0;
+    /* background-color: var(--rc-swatch-or); */
+    background: rgb(175,214,255);
+    background: linear-gradient(180deg, rgba(175,214,255,1) 0%, rgba(96,168,242,1) 35%, rgba(131,192,255,1) 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 4px 6px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 4px 6px 0 rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 6px 0 rgba(0,0,0,0.3);
+}
+
+.login-header {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    color: var(--rc-white);
+    text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.26);
+}
+
+.login-header i {
+    margin-right: 10px;
+}
+
+.login-form {
+    padding: 20px;
+    border-top: 1px solid #84b3e4;    
+}
+
+.br-t {
+    border-top: 1px solid #59a1ec;
+}
+
+.login-form label {
+    color: var(--rc-white);
+    text-transform: capitalize;
+    text-shadow: 3px 3px 2px rgba(123, 123, 123, 0.5);
+}
+
+.login-form .error-input {
+    text-shadow: none;
+    color: #b90921;
+}
+
+.login-form input {
+    width: 100%;
+}
+
+.login-form input[type="checkbox"] {
+    width: auto;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.login-form .btn {
+    padding: 5px 25px;
+    background-color: #062f8c;
+    color: var(--rc-white);
+}
+
+.login-form .btn i {
+    margin-right: 10px;
+}
+
+.login-form a {
+    color: #330194;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        width: 40%;
+    }
+    .login-form {
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .login-container {
+        width: 30%;
+    }
+}
+/* login-container ends */
 
 /* =============================== */
 
