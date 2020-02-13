@@ -240,6 +240,18 @@ Common Utilities
     margin: 0 auto;    
 }
 
+.txt-l {
+    text-align: left;
+}
+
+.txt-c {
+    text-align: center;
+}
+
+.txt-r {
+    text-align: right;
+}
+
 .edge-align {
     display: flex;
     align-items: center;
@@ -408,6 +420,10 @@ Common Utilities
     border-top-right-radius: .25rem;
 }
 
+.rc-tab-item .rc-tab-link i {
+    margin-right: 5px;
+}
+
 .rc-tab-item .rc-tab-link.active {
     border-color: var(--rc-swatch-bl);
     background-color: var(--rc-swatch-bl);
@@ -461,6 +477,7 @@ Common Utilities
 .rc-thead-gr th {
     color: var(--rc-white);
     background-color: var(--rc-swatch-gr);
+    text-transform: capitalize;
 }
 
 .rc-thead-or th {
@@ -638,6 +655,10 @@ input.error {
     color: var(--rc-white);
 }
 
+.rc-week-pager .week-left button:hover {
+    background-color: var(--rc-swatch-pk-dr);
+}
+
 .rc-week-pager .week-left.disabled button {
     border: 1px solid var(--rc-grey-mid);
     background-color: var(--rc-grey-mid);
@@ -649,6 +670,10 @@ input.error {
     border: 1px solid var(--rc-swatch-pk);
     background-color: var(--rc-swatch-pk);
     color: var(--rc-white);
+}
+
+.rc-week-pager .week-right button:hover {
+    background-color: var(--rc-swatch-pk-dr);
 }
 
 .rc-week-pager .week-right.disabled button {
@@ -689,6 +714,57 @@ input.error {
 
 .rc-timesheet-ctrl {
     margin-bottom: 10px;
+}
+
+.details-history-wrapper .rc-tabnav {
+    flex-direction: row-reverse;
+}
+
+.details-history-content {
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: var(--rc-grey-mid);
+    padding: 10px;
+}
+
+/* --timesheet table */
+.timesheet-table th {
+    vertical-align: middle;
+    border-left: 1px dashed var(--rc-white);
+}
+
+.timesheet-table th:first-child {
+    border-left: 0;
+}
+
+.timesheet-table td {
+    vertical-align: middle;
+    border-left: 1px dashed var(--rc-grey-dr);
+    text-align: center;
+}
+
+.timesheet-table td:first-child {
+    border-left: 0;
+    text-align: left;
+}
+
+.timesheet-table td:last-child {
+    background-color: var(--rc-grey-lt);
+    text-align: right;
+}
+
+.timesheet-table tr.timesheet-total td {
+    background-color: var(--rc-grey-lt);
+}
+
+.timesheet-table tr.timesheet-total td:first-child {
+    background-color: var(--rc-white);
+}
+
+@media (max-width: 768px) {    
+    .timetable-wrapper {
+        overflow-x: scroll;
+    }
 }
 
 /* ---------------------------------------------------
