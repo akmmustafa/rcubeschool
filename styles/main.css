@@ -731,10 +731,13 @@ input.error {
 .timesheet-table th {
     vertical-align: middle;
     border-left: 1px dashed var(--rc-white);
+    text-align: center;
+    width: 70px; /* Freezing Width */
 }
 
 .timesheet-table th:first-child {
     border-left: 0;
+    width: 300px; /* Freezing Width */
 }
 
 .timesheet-table td {
@@ -745,23 +748,36 @@ input.error {
 
 .timesheet-table td:first-child {
     border-left: 0;
-    text-align: left;
+    text-align: left;    
 }
 
 .timesheet-table td:last-child {
-    background-color: var(--rc-grey-lt);
+    background-color: var(--rc-grey-mid);
     text-align: right;
+    border-bottom: 1px dashed var(--rc-grey-dr);
+}
+
+.timesheet-table td input[type="text"] {
+    width: 56px;
+    padding: 0 5px;
 }
 
 .timesheet-table tr.timesheet-total td {
-    background-color: var(--rc-grey-lt);
+    background-color: var(--rc-grey-mid);
 }
 
 .timesheet-table tr.timesheet-total td:first-child {
     background-color: var(--rc-white);
 }
 
-@media (max-width: 768px) {    
+.timesheet-table tr.timesheet-total td:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+@media (max-width: 768px) {  
+    .timesheet-table {
+        width: 1024px;
+    }  
     .timetable-wrapper {
         overflow-x: scroll;
     }
