@@ -19,3 +19,11 @@ r$.subscribe("/r$/onload", function () {
     });
 });
 // rcube framework ends
+
+// Sample Test Codes Starts
+r$.subscribe("/r$/onload", function () {
+    r$("#bellNotification").on("click", function () {
+        alert("Notification button clicked");
+    });
+});
+// Sample Test Codes Ends
