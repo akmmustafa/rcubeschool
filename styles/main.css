@@ -452,6 +452,7 @@ Common Utilities
 }
 
 /* --Calendar */
+    /* --Full Year Calendar */
 .rc-calendar-container {
     margin-bottom: 0.5rem;
 }
@@ -611,6 +612,103 @@ Common Utilities
         width: 100%;
     }
 }
+
+/* -- Full Month - with Events */
+.rc-month-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.rc-month-shift {
+    font-size: 22px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--rc-black-lt);
+}
+
+.rc-month-shift button {
+    margin-left: 5px;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.rc-month-box {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.rc-weekdays-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--rc-grey-mid);
+    flex-wrap: wrap;
+}
+
+.rc-weekday {
+    width: 14.28%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.rc-daynumbers-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid transparent;
+}
+
+.rc-daynumber {
+    width: 14.28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--rc-grey-lt);
+    border: 1px solid var(--rc-white);
+    height: 7rem;
+    cursor: pointer;
+}
+
+.rc-daynumber .rc-number {
+    display: flex;
+    justify-content: center;
+}
+
+.rc-daynumber .rc-events {
+    background-color: var(--rc-swatch-gr-dr);
+    color: var(--rc-white);
+    border-radius: 4px;
+    margin: 0 4px 2px 4px;
+    padding: 4px;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.rc-daynumber .rc-events:hover {
+    background-color: var(--rc-swatch-gr);
+}
+
+@media (max-width: 768px) {
+    .rc-daynumber .rc-events {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (min-width: 992px) {
+    .rc-month-box {
+        font-size: 1.09em;
+    }
+}
+/* --Calendar Ends */
+
 /* --Table */
 .rc-table {
     width: 100%;
