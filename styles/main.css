@@ -451,7 +451,129 @@ Common Utilities
     }
 }
 
+/* --Calendar */
+.rc-calendar-container {
+    margin-bottom: 0.5rem;
+}
 
+.rc-year-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.rc-year-box {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.monthly-wrapper {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.month-title {
+    text-transform: capitalize;
+    padding: 0.5rem 0.6rem;
+    font-weight: bold;
+}
+
+.week-names {
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-name {
+    width: 14.28%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--rc-grey-dr);
+}
+
+.day-index {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-number {
+    width: 14.28%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev-mdate,
+.next-mdate {
+    color: var(--rc-grey-dr);
+}
+
+.day-number span {
+    width: 25px;
+    height: 25px;    
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.day-number span:hover {
+    background-color: var(--rc-grey-mid);
+}
+
+.day-number span.today {
+    background-color: var(--rc-swatch-bl);
+    color: var(--rc-white);
+}
+
+.day-number span.today:hover {
+    background-color: var(--rc-swatch-bl-dr);
+}
+
+.day-number span.event {
+    background-color: var(--rc-swatch-gr);
+    color: var(--rc-white);
+}
+
+.day-number span.event:hover {
+    background-color: var(--rc-swatch-gr-dr);
+    color: var(--rc-white);
+}
+
+.day-number span.holiday {
+    background-color: var(--rc-swatch-or);
+    color: var(--rc-white);
+}
+
+.day-number span.holiday:hover {
+    background-color: var(--rc-swatch-or-dr);
+}
+
+@media (min-width: 768px) {
+    .rc-calendar-container {
+        margin-bottom: 1rem;
+    }
+    
+    .rc-year-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .rc-year-box {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 992px) {
+    .rc-year-box {
+        width: 25%;
+    }
+}
 /* --Table */
 .rc-table {
     width: 100%;
