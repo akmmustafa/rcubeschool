@@ -466,6 +466,10 @@ Common Utilities
     margin: 1rem 0;
 }
 
+.rc-generic-calendar {
+    width: 100%;
+}
+
 .monthly-wrapper {
     font-size: 12px;
     font-weight: 400;
@@ -477,6 +481,30 @@ Common Utilities
     text-transform: capitalize;
     padding: 0.5rem 0.6rem;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.month-label span {
+    margin-left: 10px;
+}
+
+.month-shift {
+    display: flex;
+}
+
+.month-shift button {
+    background-color: var(--rc-grey-dr);
+    color: var(--rc-white);
+    border: 1px solid var(--rc-grey-dr);
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.month-shift button:hover {
+    background-color: var(--rc-black-lt);
 }
 
 .week-names {
@@ -567,11 +595,20 @@ Common Utilities
     .rc-year-box {
         width: 33.33%;
     }
+
+    .rc-generic-calendar {
+        width: 100%;
+    }
+    
 }
 
 @media (min-width: 992px) {
     .rc-year-box {
         width: 25%;
+    }
+
+    .rc-generic-calendar {
+        width: 100%;
     }
 }
 /* --Table */
