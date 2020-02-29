@@ -614,12 +614,14 @@ Common Utilities
 }
 
 /* -- Full Month - with Events */
-.rc-month-wrapper {
+.rc-month-wrapper,
+.rc-week-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.rc-month-shift {
+.rc-month-shift,
+.rc-week-shift {
     font-size: 22px;
     text-transform: capitalize;
     display: flex;
@@ -629,7 +631,8 @@ Common Utilities
     border-bottom: 1px solid var(--rc-black-lt);
 }
 
-.rc-month-shift button {
+.rc-month-shift button,
+.rc-week-shift button {
     margin-left: 5px;
     padding: 0 10px;
     border: none;
@@ -1041,6 +1044,116 @@ input.error {
     }  
     .timetable-wrapper {
         overflow-x: scroll;
+    }
+}
+
+/* timesheet flex grid */
+.timetable-wrapper {
+    margin-bottom: 15px;
+}
+
+.ts-flex-container {
+    -webkit-box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);
+}
+
+.ts-input input {
+    height: 25px;
+    padding: 0 5px;
+    width: 40px;
+}
+
+.ts-head {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-gr);
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px dashed var(--rc-white);
+    width: 79px;
+}
+
+.ts-body {
+    padding: 5px;
+}
+
+.ts-flex-activities {
+    display: flex;
+    flex-direction: row;
+}
+
+.ts-flex-activities .ts-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 0;
+    border-top: 0;
+}
+
+.ts-flex-activities .ts-body.ts-total {
+    text-transform: capitalize;
+    background-color: var(--rc-grey-mid);
+}
+
+.ts-flex-days {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ts-flex-days .ts-head.ts-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .ts-head {
+        width: auto;
+        height: 50px;
+        border-left: 1px dashed var(--rc-white);
+        border-top: 0;
+    }
+    .ts-body {        
+        border-left: 1px dashed var(--rc-grey-dr);
+        border-bottom: 1px solid var(--rc-grey-mid);
+    }
+    .ts-flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ts-flex-activities {
+        flex-direction: column;
+        flex-grow: 4;
+    }
+
+    .ts-flex-activities .ts-head {
+        border-left: 0;
+    }
+
+    .ts-flex-activities .ts-body {
+        border-left: 0;
+    }
+    
+    .ts-flex-days {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .ts-flex-days .ts-body {
+        text-align: center;
+    }
+
+    .ts-flex-days .ts-head.ts-total ~ .ts-body,
+    .ts-flex-days .ts-body.ts-total {
+        background-color: var(--rc-grey-mid);
+        border-bottom: 1px dashed var(--rc-grey-dr);
+    }
+
+    .ts-flex-days .ts-body.ts-total:last-child {
+        border-bottom: 0;
     }
 }
 
