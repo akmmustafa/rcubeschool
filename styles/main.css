@@ -236,6 +236,14 @@ Common Utilities
     padding: 0 !important;
 }
 
+.br-z {
+    border: 0 !important;
+}
+
+.br-l-z {
+    border-left: 0 !important;
+}
+
 .mx-auto {
     margin: 0 auto;    
 }
@@ -254,6 +262,10 @@ Common Utilities
 
 .v-hide {
     visibility: hidden;
+}
+
+.xs-hidden {
+    display: none;
 }
 
 .edge-align {
@@ -276,6 +288,14 @@ Common Utilities
 
     .edge-align {
         flex-direction: row;
+    }
+
+    .xs-visible {
+        display: none;
+    }
+
+    .xs-hidden {
+        display: block;
     }
 }
 
@@ -1154,6 +1174,99 @@ input.error {
 
     .ts-flex-days .ts-body.ts-total:last-child {
         border-bottom: 0;
+    }
+}
+
+/* r4-timesheet */
+.r4-timesheet-container {
+    margin-bottom: 15px;
+}
+
+.r4-tsflex {
+    margin-bottom: 2px;
+}
+
+.r4-greenhead {
+    background-color: var(--rc-swatch-gr);
+    color: var(--rc-white);
+    text-transform: capitalize;    
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.r4-transcontainer {
+    padding: 5px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--rc-grey-mid);
+    font-size: 12px;
+}
+
+.r4-transcontainer.r4-total {
+    background-color: var(--rc-grey-mid);
+    text-align: center;
+}
+
+.ts-description::before {
+    content: 'Activities';
+    font-size: 10px;
+    padding: 3px;
+    background-color: var(--rc-swatch-bl);
+    color: var(--rc-white);
+    margin-right: 3px;
+}
+
+.ts-hours .ts-input::before {
+    content: 'Hours';
+    font-size: 10px;
+    padding: 3px;
+    background-color: var(--rc-swatch-bl);
+    color: var(--rc-white);
+    margin-right: 3px;
+}
+
+.r4-transcontainer.r4-total .ts-description::before,
+.r4-transcontainer.r4-total .ts-hours .ts-input::before {
+    content: '';
+    padding: 0;
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {     
+    .r4-timesheet-container {
+        display: flex;
+        justify-content: space-between;            
+        -webkit-box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);
+        box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.2);    
+    }
+    .r4-tsflex {
+        margin-bottom: 0;
+        width: 12.5%;
+    }
+    .r4-greenhead {
+        font-weight: bold;
+        flex-direction: column;
+        align-items: center;
+        border-left: 1px dashed var(--rc-white);
+    }
+    .r4-transcontainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 0;
+        border-bottom: 1px solid var(--rc-grey-mid);
+        border-left: 1px dashed var(--rc-grey-dr);
+    }
+    .ts-description,
+    .r4-transcontainer.r4-total.xs-hidden .ts-description {
+        line-height: 1.5;
+        min-height: 50px;
+    }
+    .r4-transcontainer.r4-total .ts-description {
+        line-height: normal;
+        min-height: auto;
     }
 }
 
