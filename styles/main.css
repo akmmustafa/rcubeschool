@@ -730,6 +730,72 @@ Common Utilities
         font-size: 1.09em;
     }
 }
+
+/* --Full Week Calendar */
+.rc-week-box {
+    position: relative;
+    margin-bottom: 5rem;
+    font-size: 12px;
+}
+
+.rc-week-index {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--rc-black-lt);
+}
+
+.rc-day-nd {}
+
+.rc-dayname {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rc-daydate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.rc-daydate:hover {
+    background-color: var(--rc-grey-mid);
+}
+
+.rc-daydate.today,
+.rc-daydate.today:hover {
+    color: var(--rc-white);
+    background-color: var(--rc-swatch-bl-dr);
+}
+
+.rc-weekday-timeslab {
+
+}
+
+@media (min-width: 768px) {
+    .rc-daydate {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .rc-week-box {
+        font-size: 1.09em;
+    }
+}
+
 /* --Calendar Ends */
 
 /* --Table */
