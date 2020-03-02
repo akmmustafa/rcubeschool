@@ -1996,7 +1996,18 @@ footer {
     text-transform: capitalize;
     font-size: 12px;
     line-height: 1;
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.small-txt a {
+    color: var(--rc-grey-dr);
+    font-size: 22px;
+}
+
+.small-txt a:hover {
+    color: var(--rc-grey-mid);
 }
 
 .contact-txt {
