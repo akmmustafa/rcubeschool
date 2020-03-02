@@ -734,20 +734,21 @@ Common Utilities
 /* --Full Week Calendar */
 .rc-week-box {
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 50rem;
     font-size: 12px;
 }
 
 .rc-week-index {
-    position: absolute;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--rc-black-lt);
+    padding-left: 2rem;
 }
 
-.rc-day-nd {}
+.rc-day-nd {
+    width: 14.3%;
+}
 
 .rc-dayname {
     text-transform: uppercase;
@@ -778,7 +779,73 @@ Common Utilities
 }
 
 .rc-weekday-timeslab {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 12.5rem;
+    overflow-y: scroll;
+}
 
+.rc-perhour {
+    position: relative;
+    border-bottom: 1px solid var(--rc-grey-dr);
+    padding-left: 2rem;
+    display: flex;
+}
+
+.rc-perhour .slot {
+    border-left: 1px solid var(--rc-grey-dr);
+    width: 14.3%;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.rc-perhour::before {
+    position: absolute;
+    left: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--rc-grey-dr);
+    top: 13px;
+    background-color: var(--rc-white);
+    padding-right: 2px;
+    z-index: 1;
+}
+
+._1am::before {
+    content: '1am';
+}
+._2am::before {
+    content: '2am';
+}
+._3am::before {
+    content: '3am';
+}
+._4am::before {
+    content: '4am';
+}
+._5am::before {
+    content: '5am';
+}
+._6am::before {
+    content: '6am';
+}
+._7am::before {
+    content: '7am';
+}
+._8am::before {
+    content: '8am';
+}
+._9am::before {
+    content: '9am';
+}
+._10am::before {
+    content: '10am';
+}
+._11am::before {
+    content: '11am';
 }
 
 @media (min-width: 768px) {
