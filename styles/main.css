@@ -39,6 +39,9 @@
     --rc-font-monospace: "Lucida Console","Courier New"; 
 
     --rc-para-grey: #777777;
+
+    --rc-footer-black-lt: #495052;
+    --rc-footer-black-dr: #404548;
 }
 
 html {
@@ -1964,6 +1967,92 @@ Custom Styles
     }
 }
 /* timesheet-container ends */
+
+/* =============================== */
+
+/* footer-container starts */
+footer {
+    background-color: var(--rc-footer-black-lt);
+    padding-top: 10px;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col {
+    margin-bottom: 20px;
+}
+
+.big-txt {
+    color: var(--rc-white);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.small-txt {
+    color: var(--rc-grey-dr);
+    text-transform: capitalize;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.contact-txt {
+    color: var(--rc-white);
+    font-family: var(--rc-font-serif);
+    font-weight: bold;
+}
+
+.subscribe {
+    display: flex;
+}
+
+.subscribe input {
+    border-radius: 4px 0 0 4px;
+}
+
+.subscribe button {
+    border-radius: 0 4px 4px 0;
+}
+
+.subfoot {
+    background-color: var(--rc-footer-black-dr);
+    color: var(--rc-grey-dr);
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    footer {
+        padding-top: 10px;
+    }
+    
+    .footer-row {
+        padding: 20px 0;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .big-txt {
+        font-size: 18px;
+    }
+    
+    .small-txt {
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    
+    .contact-txt {
+        font-size: 18px;
+    }
+
+    .subfoot {
+        padding: 10px 0;
+    }
+}
+/* footer-container ends */
 
 /*
 @media (min-width: 992px) { ... }
