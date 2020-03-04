@@ -644,7 +644,8 @@ Common Utilities
 }
 
 .rc-month-shift,
-.rc-week-shift {
+.rc-week-shift,
+.rc-day-shift {
     font-size: 22px;
     text-transform: capitalize;
     display: flex;
@@ -655,7 +656,8 @@ Common Utilities
 }
 
 .rc-month-shift button,
-.rc-week-shift button {
+.rc-week-shift button,
+.rc-day-shift button {
     margin-left: 5px;
     padding: 0 10px;
     border: none;
@@ -735,13 +737,14 @@ Common Utilities
 }
 
 /* --Full Week Calendar */
-.rc-week-box {
+.rc-week-box,
+.rc-day-box {
     position: relative;
-    margin-bottom: 50rem;
     font-size: 12px;
 }
 
-.rc-week-index {
+.rc-week-index,
+.rc-day-index {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
@@ -758,6 +761,17 @@ Common Utilities
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.rc-day-index .rc-dayname {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .rc-day-index .rc-dayname {
+        justify-content: normal;
+        margin-left: 7px;
+    }
 }
 
 .rc-daydate {
@@ -781,8 +795,8 @@ Common Utilities
     background-color: var(--rc-swatch-bl-dr);
 }
 
-.rc-weekday-timeslab {
-    position: absolute;
+.rc-weekday-timeslab,
+.rc-daywise-timeslab {
     width: 100%;
     display: flex;
     flex-direction: column;
