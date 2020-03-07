@@ -415,6 +415,173 @@ Common Utilities
     background-color: var(--rc-swatch-pk-dr);
 }
 
+/* keyframes */
+@-webkit-keyframes fadeDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(0, 50%);
+		transform: translate(0, 50%);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fadeDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(0, 50%);
+		transform: translate(0, 50%);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes fadeUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(0, -50%);
+		transform: translate(0, -50%);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fadeUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(0, -50%);
+		transform: translate(0, -50%);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes fadeLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(-30%, 0);
+		transform: translate(-30%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fadeLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(-30%, 0);
+		transform: translate(-30%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes fadeRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(30%, 0);
+		transform: translate(30%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fadeRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(30%, 0);
+		transform: translate(30%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+		transform: scale(.3);
+	}
+
+	50% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+		transform: scale(.3);
+	}
+
+	50% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.fadeDown {
+	-webkit-animation: fadeDown 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+	animation: fadeDown 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+.fadeRight {
+	-webkit-animation: fadeRight 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+	animation: fadeRight 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+.fadeUp {
+	-webkit-animation: fadeUp 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+	animation: fadeUp 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+.zoomIn {
+	-webkit-animation: zoomIn 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+	animation: zoomIn 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+.fadeLeft {
+	-webkit-animation: fadeLeft 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+	animation: fadeLeft 1.5s 1 .1s cubic-bezier(.77, 0, .175, 1) forwards;
+}
+
+
 /* --Tab Navs */
 .rc-tabnav-container {
     margin: 10px 0;
@@ -476,32 +643,32 @@ Common Utilities
 
 /* --Calendar */
     /* --Full Year Calendar */
-.rc-calendar-container {
+.r4calendar-box {
     margin-bottom: 0.5rem;
 }
 
-.rc-year-wrapper {
+.r4year-wrap {
     display: flex;
     flex-direction: column;
 }
 
-.rc-year-box {
+.r4four-col {
     display: flex;
     margin: 1rem 0;
 }
 
-.rc-generic-calendar {
+.r4one-col {
     width: 100%;
 }
 
-.monthly-wrapper {
+.r4month-wrap {
     font-size: 12px;
     font-weight: 400;
     width: 100%;
     padding: 0 1rem;
 }
 
-.month-title {
+.r4month-title {
     text-transform: capitalize;
     padding: 0.5rem 0.6rem;
     font-weight: bold;
@@ -509,15 +676,15 @@ Common Utilities
     justify-content: space-between;
 }
 
-.month-label span {
+.r4month-label span {
     margin-left: 10px;
 }
 
-.month-shift {
+.r4month-shift {
     display: flex;
 }
 
-.month-shift button {
+.r4month-shift button {
     background-color: var(--rc-grey-dr);
     color: var(--rc-white);
     border: 1px solid var(--rc-grey-dr);
@@ -527,11 +694,11 @@ Common Utilities
     align-items: center;
 }
 
-.month-shift button:hover {
+.r4month-shift button:hover {
     background-color: var(--rc-black-lt);
 }
 
-.week-names {
+.r4week-label {
     text-transform: capitalize;
     display: flex;
     flex-wrap: wrap;
@@ -546,7 +713,7 @@ Common Utilities
     color: var(--rc-grey-dr);
 }
 
-.day-index {
+.r4day-index {
     display: flex;
     flex-wrap: wrap;
 }
@@ -606,39 +773,39 @@ Common Utilities
 }
 
 @media (min-width: 768px) {
-    .rc-calendar-container {
+    .r4calendar-box {
         margin-bottom: 1rem;
     }
     
-    .rc-year-wrapper {
+    .r4year-wrap {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
     
-    .rc-year-box {
+    .r4four-col {
         width: 33.33%;
     }
 
-    .rc-generic-calendar {
+    .r4one-col {
         width: 100%;
     }
     
 }
 
 @media (min-width: 992px) {
-    .rc-year-box {
+    .r4four-col {
         width: 25%;
     }
 
-    .rc-generic-calendar {
+    .r4one-col {
         width: 100%;
     }
 }
 
 /* -- Full Month - with Events */
-.rc-month-wrapper,
-.rc-week-wrapper {
+.r4month-wrap,
+.r4week-wrap {
     display: flex;
     flex-direction: column;
 }
