@@ -239,6 +239,10 @@ Common Utilities
     padding: 0 !important;
 }
 
+.p-10 {
+    padding: 10px !important;
+}
+
 .br-z {
     border: 0 !important;
 }
@@ -346,6 +350,20 @@ Common Utilities
 
 .btn-sm {
     padding: 0 10px;
+}
+
+.btn-md {
+    padding: 0 20px;
+}
+
+.btn-lg {
+    padding: 0 25px;
+}
+
+.btn-block {
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .btn .fa {
@@ -1906,6 +1924,7 @@ Custom Styles
     }
     .login-form {
         padding: 1.5rem 3rem;
+        background: #cecece url("../images/login/laptopbg.jpg") no-repeat fixed center;
     }
 }
 
@@ -2152,7 +2171,7 @@ Custom Styles
 /* =============================== */
 
 /* footer-container starts */
-footer {
+footer.r4footBg {
     background-color: var(--rc-footer-black-lt);
     padding-top: 10px;
 }

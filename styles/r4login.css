@@ -1,0 +1,71 @@
+/* R4Login Starts */
+.r4login-container {
+    display: flex;
+
+}
+.r4login {
+    padding: 1rem;
+}
+.r4login .title{
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.r4login .sub-text {
+    color: #65696f;
+}
+
+.r4login-form {
+    padding: 3rem 0 1rem;
+}
+
+.r4login-form label {
+    text-transform: capitalize;
+}
+
+.r4login-form input {
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+}
+
+.r4login-form input:focus {
+    border-color: #ec774b;
+    outline: none;
+}
+
+.r4link,
+.r4link:hover {
+    color: #ec774b;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.r4login-bg {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .r4login {
+        padding: 2rem;
+        width: 40%;
+        background-color: #fff;
+    }
+    .r4login .title {
+        font-size: 32px;
+    }
+
+    .r4login-form label {
+        font-weight: bold;
+    }
+
+    .r4login-bg {
+        display: block;
+        width: 60%;
+        background: #cecece url("../images/login/laptopbg.jpg") no-repeat fixed center;
+        background-size: cover;
+        height: 100vh;
+    }
+}
+/* R4Login Ends */
